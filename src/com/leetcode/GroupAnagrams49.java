@@ -8,7 +8,6 @@ public class GroupAnagrams49 {
         for(String str: strs){
             int[] alphabetCount = new int[26];
             char[] strToChar = str.toCharArray();
-            Arrays.sort(strToChar);
             for(int i=0; i<str.length(); i++){
                 alphabetCount[strToChar[i]-'a']++;
             }
