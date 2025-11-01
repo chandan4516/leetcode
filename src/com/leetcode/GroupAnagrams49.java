@@ -12,15 +12,8 @@ public class GroupAnagrams49 {
             for(int i=0; i<str.length(); i++){
                 alphabetCount[strToChar[i]-'a']++;
             }
-            StringBuilder sbldr = new StringBuilder();
-            for(int i=0; i<26; i++){
-                sbldr.append(alphabetCount[i]);
-                sbldr.append('#');
-            }
-            String key = sbldr.toString();
-            if(!anagramMap.containsKey(key)){
-                anagramMap.put(key, new ArrayList<>());
-            }
+            String key = Arrays.toString(alphabetCount);
+            anagramMap.putIfAbsent(key, new ArrayList<>());
             anagramMap.get(key).add(str);
         }
         return new ArrayList<>(anagramMap.values());
