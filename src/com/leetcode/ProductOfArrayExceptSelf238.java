@@ -25,7 +25,7 @@
  */
 package com.leetcode;
 
-public class ProductOfArrayExceptSelf {
+public class ProductOfArrayExceptSelf238 {
     public int[] productExceptSelf(int[] nums) {
         int[] result = new int[nums.length];
         int leftProduct = 1;
