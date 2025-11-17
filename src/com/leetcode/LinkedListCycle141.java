@@ -42,7 +42,7 @@ public class LinkedListCycle141 {
         ListNode twoStep = head;
         while(twoStep!=null && twoStep.next!=null){
             oneStep = oneStep.next;
-            twoStep = twoStep.next==null?null:twoStep.next.next;
+            twoStep = twoStep.next.next;
             if(oneStep == twoStep){
                 return true;
             }
